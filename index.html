@@ -135,6 +135,9 @@ body[data-lang="ar"] .toc h3{letter-spacing:0;text-transform:none}
   box-shadow:0 10px 24px rgba(255,90,54,.4);transition:.2s;word-break:break-all;
 }
 .mail:hover{transform:translateY(-2px)}
+.contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:20px}
+.contact-links .mail{margin-top:0}
+.mail.phone{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);box-shadow:none}
 
 footer{text-align:center;color:var(--muted);font-size:14px;padding:0 20px 40px}
 
@@ -313,7 +316,10 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:0 20px 40px}
       <h2 class="en">Contact technical support</h2><h2 class="ar">تواصل مع الدعم الفني</h2>
       <p class="en">Questions about this policy or your data? We're happy to help.</p>
       <p class="ar">لديك استفسار عن هذه السياسة أو عن بياناتك؟ يسعدنا مساعدتك.</p>
-      <a class="mail" href="mailto:omran_adam@yahoo.com?subject=Okazion%20Support">✉ omran_adam@yahoo.com</a>
+      <div class="contact-links">
+        <a class="mail" href="mailto:omran_adam@yahoo.com?subject=Okazion%20Support">✉ omran_adam@yahoo.com</a>
+        <a class="mail phone" href="tel:+201004279150"><span dir="ltr">📞 +20 100 427 9150</span></a>
+      </div>
     </article>
   </div>
 </main>
