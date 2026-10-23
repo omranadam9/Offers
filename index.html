@@ -1,179 +1,351 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!doctype html>
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>سياسة الخصوصية – أوكازيون</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy – Okazion | سياسة الخصوصية – أوكازيون</title>
+<meta name="description" content="Privacy Policy for the Okazion app – offers and discounts in Saudi Arabia, Egypt and the UAE.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#f4f6fa;--card:#fff;--text:#1c1c1e;--muted:#5b6270;--brand:#0a6b82;--line:#e3e7ee}
-  @media (prefers-color-scheme:dark){:root{--bg:#0b0d10;--card:#16191e;--text:#f2f3f5;--muted:#a3a9b4;--brand:#4fc3dc;--line:#2a2f37}}
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--text);line-height:1.9;
-       font-family:-apple-system,"Segoe UI",Tahoma,"Noto Naskh Arabic",sans-serif}
-  .wrap{max-width:780px;margin:0 auto;padding:24px 16px 60px}
-  header{text-align:center;padding:28px 0 8px}
-  header h1{margin:0 0 6px;font-size:28px;color:var(--brand)}
-  header p{margin:0;color:var(--muted);font-size:14px}
-  section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin-top:16px}
-  h2{font-size:19px;margin:0 0 8px;color:var(--brand)}
-  p{margin:6px 0} ul{margin:6px 0;padding-inline-start:22px} li{margin:4px 0}
-  a{color:var(--brand)}
-  .en{direction:ltr;text-align:left}
-  .en h2,.en h3{color:var(--brand)}
-  hr{border:none;border-top:1px solid var(--line);margin:34px 0}
-  footer{text-align:center;color:var(--muted);font-size:13px;margin-top:28px}
+:root{
+  --bg:#f5f7fb; --surface:#ffffff; --text:#0f172a; --muted:#5b6478; --line:#e6eaf2;
+  --brand:#ff5a36; --brand2:#ff9a3c; --accent:#6c5ce7; --soft:#fff3ee;
+  --shadow:0 10px 30px rgba(15,23,42,.07); --radius:20px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b1020; --surface:#131a2e; --text:#eef1f8; --muted:#a0a9bf; --line:#232c46;
+    --soft:#1d1a26; --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b1020; --surface:#131a2e; --text:#eef1f8; --muted:#a0a9bf; --line:#232c46;
+  --soft:#1d1a26; --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+  background:var(--bg); color:var(--text); line-height:1.8;
+  font-family:'Inter','Cairo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+body[data-lang="ar"]{font-family:'Cairo','Inter',system-ui,sans-serif}
+/* language switching */
+body[data-lang="en"] .ar{display:none!important}
+body[data-lang="ar"] .en{display:none!important}
+
+/* top bar */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb,var(--bg) 82%,transparent);
+  backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{
+  max-width:1100px;margin:auto;padding:12px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px}
+.logo{
+  width:38px;height:38px;border-radius:12px;display:grid;place-items:center;color:#fff;font-weight:800;
+  background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:0 6px 16px rgba(255,90,54,.35);
+}
+.controls{display:flex;gap:8px;align-items:center}
+.lang{
+  display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px;
+}
+.lang button{
+  border:0;background:transparent;color:var(--muted);font:inherit;font-weight:700;font-size:14px;
+  padding:6px 16px;border-radius:999px;cursor:pointer;transition:.2s;
+}
+.lang button.active{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;box-shadow:0 4px 12px rgba(255,90,54,.35)}
+.icon-btn{
+  width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);
+  color:var(--text);cursor:pointer;font-size:17px;display:grid;place-items:center;
+}
+
+/* hero */
+.hero{
+  position:relative;overflow:hidden;color:#fff;text-align:center;
+  padding:72px 20px 110px;
+  background:
+    radial-gradient(900px 400px at 15% -10%,rgba(255,255,255,.22),transparent 60%),
+    radial-gradient(700px 400px at 100% 0%,rgba(108,92,231,.55),transparent 60%),
+    linear-gradient(135deg,#ff5a36 0%,#ff8a3c 55%,#ffb24a 100%);
+}
+.hero::after{
+  content:"";position:absolute;inset:auto 0 -1px 0;height:60px;
+  background:var(--bg);clip-path:ellipse(60% 100% at 50% 100%);
+}
+.hero .badge{
+  display:inline-block;padding:6px 16px;border-radius:999px;font-size:13px;font-weight:700;
+  background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);margin-bottom:18px;
+}
+.hero h1{font-size:clamp(32px,6vw,54px);line-height:1.2;font-weight:800;letter-spacing:-.5px}
+.hero p{max-width:640px;margin:16px auto 0;opacity:.95;font-size:clamp(15px,2.2vw,18px)}
+
+/* layout */
+.wrap{
+  max-width:1100px;margin:-60px auto 60px;padding:0 20px;position:relative;z-index:2;
+  display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:start;
+}
+.toc{
+  position:sticky;top:90px;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);
+}
+.toc h3{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+body[data-lang="ar"] .toc h3{letter-spacing:0;text-transform:none}
+.toc a{
+  display:block;padding:7px 12px;border-radius:10px;color:var(--text);text-decoration:none;
+  font-size:14.5px;font-weight:500;transition:.2s;
+}
+.toc a:hover{background:var(--soft);color:var(--brand)}
+
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px;box-shadow:var(--shadow);margin-bottom:20px;
+}
+.card .head{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.num{
+  flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
+  font-weight:800;color:var(--brand);background:var(--soft);
+}
+.card h2{font-size:22px;line-height:1.35}
+.card p{color:var(--muted);margin-top:8px}
+.card ul{margin:12px 0 0;padding-inline-start:22px;color:var(--muted)}
+.card li{margin:6px 0}
+.card li::marker{color:var(--brand)}
+.card strong{color:var(--text)}
+.callout{
+  margin-top:16px;padding:16px 18px;border-radius:14px;
+  background:var(--soft);border-inline-start:4px solid var(--brand);color:var(--text);
+}
+.callout p{color:var(--text);margin:0}
+
+.contact{
+  background:linear-gradient(135deg,#1b1f3b,#2d2a6e);color:#fff;border:0;text-align:center;padding:40px 28px;
+}
+.contact h2{font-size:26px}
+.contact p{color:rgba(255,255,255,.8)}
+.mail{
+  display:inline-flex;align-items:center;gap:10px;margin-top:20px;padding:14px 26px;border-radius:999px;
+  background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;text-decoration:none;font-weight:700;
+  box-shadow:0 10px 24px rgba(255,90,54,.4);transition:.2s;word-break:break-all;
+}
+.mail:hover{transform:translateY(-2px)}
+
+footer{text-align:center;color:var(--muted);font-size:14px;padding:0 20px 40px}
+
+@media(max-width:860px){
+  .wrap{grid-template-columns:1fr;margin-top:-50px}
+  .toc{position:static}
+  .card{padding:22px}
+}
 </style>
 </head>
-<body>
-<div class="wrap">
+<body data-lang="en">
 
-<header>
-  <h1>سياسة الخصوصية</h1>
-  <p>تطبيق «أوكازيون» · آخر تحديث: 23 أكتوبر 2026</p>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand"><span class="logo">O</span>
+      <span class="en">Okazion</span><span class="ar">أوكازيون</span>
+    </div>
+    <div class="controls">
+      <div class="lang" role="group" aria-label="Language">
+        <button id="btn-en" class="active" type="button">English</button>
+        <button id="btn-ar" type="button">العربية</button>
+      </div>
+      <button class="icon-btn" id="theme" type="button" aria-label="Toggle theme">🌓</button>
+    </div>
+  </div>
 </header>
 
-<section>
-  <h2>١. مقدمة</h2>
-  <p>أوكازيون تطبيق لعرض الإعلانات والعروض في السعودية ومصر والإمارات. نحترم خصوصيتك، وتوضح هذه السياسة ما هي البيانات التي يتعامل معها التطبيق وكيف تُستخدم. باستخدامك التطبيق فإنك توافق على هذه السياسة.</p>
+<section class="hero">
+  <span class="badge en">Privacy Policy</span><span class="badge ar">سياسة الخصوصية</span>
+  <h1 class="en">Your privacy matters to us</h1>
+  <h1 class="ar">خصوصيتك تهمنا</h1>
+  <p class="en">This policy explains what Okazion collects, why we collect it, and the choices you have. Last updated: October 23, 2026.</p>
+  <p class="ar">توضح هذه السياسة ما الذي يجمعه تطبيق أوكازيون ولماذا نجمعه والخيارات المتاحة لك. آخر تحديث: ٢٣ أكتوبر ٢٠٢٦.</p>
 </section>
 
-<section>
-  <h2>٢. البيانات التي نتعامل معها</h2>
-  <p><strong>أ) بيانات الحساب:</strong> يستخدم التطبيق حساب iCloud الموجود على جهازك. نحصل على معرّف مجهول من Apple (معرّف سجل المستخدم في CloudKit) لنربط إعلاناتك ومفضلتك ورسائلك بحسابك. <strong>لا نطّلع على اسمك أو بريدك الإلكتروني أو كلمة مرورك.</strong></p>
-  <p><strong>ب) الإعلانات التي تنشرها:</strong> عند إضافة إعلان تُحفظ المعلومات التي تدخلها وتصبح <strong>ظاهرة لجميع مستخدمي التطبيق</strong>، وهي: العنوان والوصف والقسم والمدينة ورقم الجوال ورقم الواتساب والعنوان والموقع على الخريطة (إن حددته) ومعلومات التوصيل والصور والشريط المكتوب على الصورة. لا تنشر معلومات لا تريد أن يراها الآخرون.</p>
-  <p><strong>ج) نشاطك داخل التطبيق:</strong> المفضلة، والتقييمات بالنجوم، وعدد مشاهدات الإعلانات، والرسائل بينك وبين المعلنين، والبلاغات عن الإعلانات المخالفة.</p>
-  <p><strong>د) الصور:</strong> نصل فقط إلى الصور التي تختارها بنفسك عند إضافة إعلان، ولا نصل إلى مكتبة صورك بالكامل.</p>
-  <p><strong>هـ) الإعدادات المحلية على جهازك:</strong> مثل الدولة المختارة ولون التطبيق وخيارات الإشعارات. تُحفظ في جهازك فقط.</p>
-  <p><strong>و) مشاركة الإعلان:</strong> عند الضغط على «مشاركة» ينشئ التطبيق رابطاً عبر iCloud للإعلان في حساب iCloud الخاص بك، ويستطيع كل من يملك الرابط فتح الإعلان.</p>
-</section>
+<main class="wrap">
+  <nav class="toc" aria-label="Contents">
+    <h3 class="en">Contents</h3><h3 class="ar">المحتويات</h3>
+    <a href="#s1"><span class="en">1. Introduction</span><span class="ar">١. مقدمة</span></a>
+    <a href="#s2"><span class="en">2. Information we collect</span><span class="ar">٢. المعلومات التي نجمعها</span></a>
+    <a href="#s3"><span class="en">3. How we use it</span><span class="ar">٣. كيف نستخدمها</span></a>
+    <a href="#s4"><span class="en">4. iCloud &amp; storage</span><span class="ar">٤. iCloud والتخزين</span></a>
+    <a href="#s5"><span class="en">5. Sharing</span><span class="ar">٥. المشاركة</span></a>
+    <a href="#s6"><span class="en">6. Location</span><span class="ar">٦. الموقع</span></a>
+    <a href="#s7"><span class="en">7. Moderation &amp; reports</span><span class="ar">٧. المراجعة والتبليغ</span></a>
+    <a href="#s8"><span class="en">8. Notifications</span><span class="ar">٨. الإشعارات</span></a>
+    <a href="#s9"><span class="en">9. Your rights</span><span class="ar">٩. حقوقك</span></a>
+    <a href="#s10"><span class="en">10. Children</span><span class="ar">١٠. الأطفال</span></a>
+    <a href="#s11"><span class="en">11. Changes</span><span class="ar">١١. التغييرات</span></a>
+    <a href="#contact"><span class="en">12. Contact support</span><span class="ar">١٢. الدعم الفني</span></a>
+  </nav>
 
-<section>
-  <h2>٣. ما لا نفعله</h2>
-  <ul>
-    <li>لا نجمع موقعك الجغرافي الحي من جهازك. الموقع الوحيد المحفوظ هو ما تحدده بنفسك لإعلانك.</li>
-    <li>لا نستخدم أدوات تحليل أو تتبع أو إعلانات من أطراف أخرى.</li>
-    <li>لا نبيع بياناتك ولا نؤجرها لأي جهة.</li>
-  </ul>
-</section>
+  <div>
+    <article class="card" id="s1">
+      <div class="head"><span class="num">1</span>
+        <h2 class="en">Introduction</h2><h2 class="ar">مقدمة</h2></div>
+      <p class="en">Okazion is a free app that gathers offers, discounts and services in one place for shoppers in Saudi Arabia, Egypt and the United Arab Emirates, and lets business owners advertise their offers. By using the app you agree to the practices described in this policy.</p>
+      <p class="ar">أوكازيون تطبيق مجاني يجمع العروض والتخفيضات والخدمات في مكان واحد للمتسوقين في السعودية ومصر والإمارات، ويتيح لأصحاب الأنشطة الإعلان عن عروضهم. باستخدامك التطبيق فإنك توافق على الممارسات الموضحة في هذه السياسة.</p>
+    </article>
 
-<section>
-  <h2>٤. كيف نستخدم البيانات</h2>
-  <ul>
-    <li>عرض الإعلانات وتمكين البحث والتصفية والخريطة.</li>
-    <li>تمكين التواصل بين المستخدمين والمعلنين (اتصال، واتساب، رسائل داخل التطبيق).</li>
-    <li>مراجعة الإعلانات قبل ظهورها والتعامل مع البلاغات والحفاظ على جودة المحتوى.</li>
-    <li>إرسال إشعارات عن قبول إعلانك أو رفضه أو وصول رسالة جديدة، ويمكنك إيقافها من الإعدادات.</li>
-  </ul>
-</section>
+    <article class="card" id="s2">
+      <div class="head"><span class="num">2</span>
+        <h2 class="en">Information we collect</h2><h2 class="ar">المعلومات التي نجمعها</h2></div>
+      <p class="en">We only handle the information needed to run the features you use:</p>
+      <p class="ar">نتعامل فقط مع المعلومات اللازمة لتشغيل الميزات التي تستخدمها:</p>
+      <ul class="en">
+        <li><strong>Advertiser content:</strong> ad text, images (up to four), business logo, category, country, city, optional location and delivery availability.</li>
+        <li><strong>Contact details you choose to publish:</strong> phone number and WhatsApp number shown on your ad so customers can reach you.</li>
+        <li><strong>Messages:</strong> in-app conversations between shoppers and advertisers.</li>
+        <li><strong>Activity:</strong> favorites, star ratings, ad view counts and reports you submit.</li>
+        <li><strong>Settings:</strong> your chosen country, city, app color and appearance preferences.</li>
+        <li><strong>Account identifier:</strong> your iCloud account is used to sign in; we do not receive your iCloud password.</li>
+      </ul>
+      <ul class="ar">
+        <li><strong>محتوى المعلن:</strong> نص الإعلان والصور (حتى أربع صور) وشعار النشاط والفئة والدولة والمدينة والموقع (اختياري) وتوفر التوصيل.</li>
+        <li><strong>بيانات التواصل التي تختار نشرها:</strong> رقم الهاتف ورقم واتساب الظاهران في إعلانك ليتمكن العملاء من التواصل معك.</li>
+        <li><strong>الرسائل:</strong> المحادثات داخل التطبيق بين المتسوقين والمعلنين.</li>
+        <li><strong>النشاط:</strong> المفضلة وتقييمات النجوم وعدد مشاهدات الإعلانات والتبليغات التي ترسلها.</li>
+        <li><strong>الإعدادات:</strong> الدولة والمدينة ولون التطبيق وتفضيلات المظهر.</li>
+        <li><strong>معرّف الحساب:</strong> يُستخدم حساب iCloud لتسجيل الدخول، ولا نحصل على كلمة مرور iCloud الخاصة بك.</li>
+      </ul>
+    </article>
 
-<section>
-  <h2>٥. التخزين ومقدمو الخدمة</h2>
-  <p>تُخزَّن بيانات التطبيق في خدمة <strong>Apple CloudKit (iCloud)</strong>، وتخضع لسياسة خصوصية Apple وإجراءاتها الأمنية. لا نستخدم خوادم أخرى لتخزين بياناتك.</p>
-  <p>يظهر رقم الجوال والواتساب المكتوب في الإعلان للجميع، وكل رسالة تُرسل عبر التطبيق قد تكون قابلة للوصول تقنياً داخل قاعدة البيانات العامة، فلا ترسل بيانات حساسة مثل كلمات المرور أو بيانات البطاقات المصرفية.</p>
-</section>
+    <article class="card" id="s3">
+      <div class="head"><span class="num">3</span>
+        <h2 class="en">How we use your information</h2><h2 class="ar">كيف نستخدم معلوماتك</h2></div>
+      <ul class="en">
+        <li>Display offers and let shoppers browse, compare, save and rate them.</li>
+        <li>Let shoppers contact advertisers by phone, WhatsApp or in-app chat.</li>
+        <li>Review ads before publication to keep content quality high.</li>
+        <li>Send you notifications about your ad's approval or rejection.</li>
+        <li>Show advertisers how many people viewed their offers.</li>
+        <li>Prevent abuse and handle reports of violating content.</li>
+      </ul>
+      <ul class="ar">
+        <li>عرض الإعلانات وتمكين المتسوقين من تصفحها ومقارنتها وحفظها وتقييمها.</li>
+        <li>تمكين المتسوقين من التواصل مع المعلنين عبر الهاتف أو واتساب أو المحادثة داخل التطبيق.</li>
+        <li>مراجعة الإعلانات قبل نشرها للحفاظ على جودة المحتوى.</li>
+        <li>إرسال إشعارات إليك بقبول إعلانك أو رفضه.</li>
+        <li>إظهار عدد مشاهدات العروض للمعلنين.</li>
+        <li>منع إساءة الاستخدام ومعالجة بلاغات المحتوى المخالف.</li>
+      </ul>
+      <div class="callout">
+        <p class="en"><strong>We do not sell your personal data</strong> and we do not use it to track you across other companies' apps or websites.</p>
+        <p class="ar"><strong>لا نبيع بياناتك الشخصية</strong> ولا نستخدمها لتتبعك عبر تطبيقات أو مواقع شركات أخرى.</p>
+      </div>
+    </article>
 
-<section>
-  <h2>٦. المراجعة والإشراف</h2>
-  <p>قد تُراجع الإعلانات من قبل المدير قبل نشرها أو بعده، وله قبول الإعلان أو رفضه أو حذفه، وإيقاف الحسابات المخالفة، وذلك لحماية المستخدمين.</p>
-</section>
+    <article class="card" id="s4">
+      <div class="head"><span class="num">4</span>
+        <h2 class="en">iCloud &amp; data storage</h2><h2 class="ar">iCloud وتخزين البيانات</h2></div>
+      <p class="en">Adding ads, favorites and messaging require you to be signed in to iCloud on your device. Ads you create are saved in your own iCloud account, and the app uses Apple's iCloud services to store and sync the data it needs. Apple processes this data under its own <a href="https://www.apple.com/legal/privacy/" style="color:var(--brand)">privacy policy</a>.</p>
+      <p class="ar">تتطلب إضافة الإعلانات والمفضلة والمراسلة تسجيل الدخول إلى iCloud على جهازك. تُحفظ الإعلانات التي تنشئها في حساب iCloud الخاص بك، ويستخدم التطبيق خدمات iCloud من Apple لتخزين البيانات اللازمة ومزامنتها. تعالج Apple هذه البيانات وفق <a href="https://www.apple.com/legal/privacy/" style="color:var(--brand)">سياسة الخصوصية الخاصة بها</a>.</p>
+    </article>
 
-<section>
-  <h2>٧. حقوقك وحذف البيانات</h2>
-  <ul>
-    <li>يمكنك تعديل إعلاناتك أو إيقافها أو حذفها في أي وقت من تبويب «إعلاناتي».</li>
-    <li>يمكنك إزالة الإعلانات من المفضلة متى شئت.</li>
-    <li>لطلب حذف بياناتك المرتبطة بحسابك (إعلانات، رسائل، تقييمات) راسلنا على البريد أدناه وسنحذفها خلال مدة معقولة.</li>
-    <li>يمكنك إيقاف الإشعارات من إعدادات التطبيق أو إعدادات الجهاز.</li>
-  </ul>
-</section>
+    <article class="card" id="s5">
+      <div class="head"><span class="num">5</span>
+        <h2 class="en">Sharing of information</h2><h2 class="ar">مشاركة المعلومات</h2></div>
+      <p class="en">Content you publish in an ad (text, images, logo, phone/WhatsApp number, location if added) is visible to all app users. Messages are visible only to the participants of the conversation. When you tap call, WhatsApp or map links, your device opens the corresponding app, which is governed by that app's own policy. We may disclose information if required by law or to protect users' safety.</p>
+      <p class="ar">المحتوى الذي تنشره في الإعلان (النص والصور والشعار ورقم الهاتف/واتساب والموقع إن أضفته) يظهر لجميع مستخدمي التطبيق. أما الرسائل فتظهر فقط لأطراف المحادثة. وعند الضغط على روابط الاتصال أو واتساب أو الخريطة يفتح جهازك التطبيق المقابل، وتخضع بياناتك فيه لسياسة ذلك التطبيق. وقد نفصح عن معلومات إذا اقتضى القانون ذلك أو لحماية سلامة المستخدمين.</p>
+    </article>
 
-<section>
-  <h2>٨. الأطفال</h2>
-  <p>التطبيق غير موجّه للأطفال دون 13 عاماً، ولا نجمع عمداً بيانات منهم.</p>
-</section>
+    <article class="card" id="s6">
+      <div class="head"><span class="num">6</span>
+        <h2 class="en">Location</h2><h2 class="ar">الموقع</h2></div>
+      <p class="en">Adding a location to an ad is optional. If you add one, it is shown on the map so shoppers can open it in their device's maps app. The app does not need your continuous location to function.</p>
+      <p class="ar">إضافة الموقع إلى الإعلان اختيارية. وإذا أضفته فسيظهر على الخريطة ليتمكن المتسوقون من فتحه في تطبيق الخرائط على أجهزتهم. ولا يحتاج التطبيق إلى موقعك بشكل مستمر ليعمل.</p>
+    </article>
 
-<section>
-  <h2>٩. مسؤولية المحتوى</h2>
-  <p>الإعلانات من إنشاء المعلنين أنفسهم. التطبيق وسيط للعرض فقط وليس طرفاً في أي صفقة أو دفع أو توصيل بين المعلن والمشتري، ولا نتحمل مسؤولية دقة الإعلانات أو جودة السلع والخدمات. تحقق قبل أي شراء أو دفع.</p>
-</section>
+    <article class="card" id="s7">
+      <div class="head"><span class="num">7</span>
+        <h2 class="en">Moderation &amp; reporting</h2><h2 class="ar">المراجعة والتبليغ</h2></div>
+      <p class="en">Ads are reviewed before publishing. You can report any violating offer from within the app, and we will review the report. Reviewers may leave notes explaining why an ad was accepted or rejected.</p>
+      <p class="ar">تُراجع الإعلانات قبل نشرها. ويمكنك التبليغ عن أي عرض مخالف من داخل التطبيق وسنراجع البلاغ. وقد يترك المراجعون ملاحظات توضح سبب قبول الإعلان أو رفضه.</p>
+    </article>
 
-<section>
-  <h2>١٠. التغييرات على هذه السياسة</h2>
-  <p>قد نحدّث هذه السياسة من وقت لآخر، ويظهر تاريخ آخر تحديث في أعلى الصفحة. استمرارك في استخدام التطبيق بعد التحديث يعني موافقتك عليه.</p>
-</section>
+    <article class="card" id="s8">
+      <div class="head"><span class="num">8</span>
+        <h2 class="en">Notifications</h2><h2 class="ar">الإشعارات</h2></div>
+      <p class="en">With your permission, we send notifications about the status of your ads and replies to your messages. You can turn notifications off at any time in your device settings.</p>
+      <p class="ar">بإذنك، نرسل إشعارات بحالة إعلاناتك والردود على رسائلك. ويمكنك إيقاف الإشعارات في أي وقت من إعدادات جهازك.</p>
+    </article>
 
-<section>
-  <h2>١١. التواصل معنا</h2>
-  <p>لأي استفسار عن الخصوصية أو لطلب حذف بياناتك:</p>
-  <ul>
-    <li>البريد الإلكتروني: <a href="mailto:omran_adam@yahoo.com">omran_adam@yahoo.com</a></li>
-    <li>الهاتف / واتساب: <a href="tel:+201004279150" dir="ltr">+20 100 427 9150</a></li>
-  </ul>
-</section>
+    <article class="card" id="s9">
+      <div class="head"><span class="num">9</span>
+        <h2 class="en">Your rights &amp; choices</h2><h2 class="ar">حقوقك وخياراتك</h2></div>
+      <ul class="en">
+        <li>Edit or delete your ads at any time.</li>
+        <li>Remove items from your favorites.</li>
+        <li>Request access to, correction of, or deletion of your data by contacting support.</li>
+        <li>Revoke permissions (notifications, photos, location) in your device settings.</li>
+      </ul>
+      <ul class="ar">
+        <li>تعديل إعلاناتك أو حذفها في أي وقت.</li>
+        <li>إزالة العناصر من المفضلة.</li>
+        <li>طلب الاطلاع على بياناتك أو تصحيحها أو حذفها بالتواصل مع الدعم الفني.</li>
+        <li>إلغاء الأذونات (الإشعارات والصور والموقع) من إعدادات جهازك.</li>
+      </ul>
+    </article>
 
-<hr>
+    <article class="card" id="s10">
+      <div class="head"><span class="num">10</span>
+        <h2 class="en">Children's privacy</h2><h2 class="ar">خصوصية الأطفال</h2></div>
+      <p class="en">Okazion is not directed to children under 13, and we do not knowingly collect their personal information. If you believe a child has provided us data, contact us and we will delete it.</p>
+      <p class="ar">أوكازيون غير موجه للأطفال دون سن ١٣ عاماً، ولا نجمع عن علم بياناتهم الشخصية. وإذا كنت تعتقد أن طفلاً زوّدنا ببيانات فتواصل معنا وسنحذفها.</p>
+    </article>
 
-<div class="en" lang="en" dir="ltr">
-<header><h1>Privacy Policy</h1><p>Okazyon app · Last updated: October 23, 2026</p></header>
+    <article class="card" id="s11">
+      <div class="head"><span class="num">11</span>
+        <h2 class="en">Changes to this policy</h2><h2 class="ar">التغييرات على هذه السياسة</h2></div>
+      <p class="en">We may update this policy from time to time. The "Last updated" date at the top shows the latest version, and continued use of the app means you accept the changes.</p>
+      <p class="ar">قد نحدّث هذه السياسة من وقت لآخر. يوضح تاريخ «آخر تحديث» في الأعلى أحدث نسخة، واستمرارك في استخدام التطبيق يعني قبولك للتغييرات.</p>
+    </article>
 
-<section>
-  <h2>1. Overview</h2>
-  <p>Okazyon is an app for browsing and posting offers and classified ads in Saudi Arabia, Egypt and the UAE. This policy explains what data the app handles and how it is used.</p>
-</section>
+    <article class="card contact" id="contact">
+      <h2 class="en">Contact technical support</h2><h2 class="ar">تواصل مع الدعم الفني</h2>
+      <p class="en">Questions about this policy or your data? We're happy to help.</p>
+      <p class="ar">لديك استفسار عن هذه السياسة أو عن بياناتك؟ يسعدنا مساعدتك.</p>
+      <a class="mail" href="mailto:omran_adam@yahoo.com?subject=Okazion%20Support">✉ omran_adam@yahoo.com</a>
+    </article>
+  </div>
+</main>
 
-<section>
-  <h2>2. Data we handle</h2>
-  <ul>
-    <li><strong>Account:</strong> the app uses your device's iCloud account. We receive an anonymous Apple-provided CloudKit user ID to link your ads, favorites and messages to you. We do not see your name, email or password.</li>
-    <li><strong>Ads you publish:</strong> title, description, category, city, phone and WhatsApp numbers, address, optional map location, delivery info and images. This information is <strong>visible to all app users</strong>.</li>
-    <li><strong>Activity:</strong> favorites, star ratings, view counts, messages with advertisers, and reports of ads.</li>
-    <li><strong>Photos:</strong> only the images you explicitly select when creating an ad.</li>
-    <li><strong>Local settings:</strong> selected country, app color and notification preferences, stored on your device.</li>
-    <li><strong>Sharing:</strong> when you tap Share, the app creates an iCloud share link for the ad; anyone with the link can open the ad.</li>
-  </ul>
-</section>
+<footer>
+  <span class="en">©️ 2026 Okazion. All rights reserved.</span>
+  <span class="ar">©️ ٢٠٢٦ أوكازيون. جميع الحقوق محفوظة.</span>
+</footer>
 
-<section>
-  <h2>3. What we do not do</h2>
-  <ul>
-    <li>We do not collect your live device location.</li>
-    <li>We do not use third-party analytics, advertising or tracking.</li>
-    <li>We do not sell or rent your data.</li>
-  </ul>
-</section>
-
-<section>
-  <h2>4. Use of data</h2>
-  <p>To display ads, enable search, filters and maps, let users contact advertisers, review content and handle reports, and send notifications about ad approval or new messages (which you can turn off).</p>
-</section>
-
-<section>
-  <h2>5. Storage</h2>
-  <p>Data is stored in Apple CloudKit (iCloud) and is subject to Apple's privacy and security practices. Phone numbers in ads are public, and messages may be technically accessible in the public database, so please do not send sensitive information.</p>
-</section>
-
-<section>
-  <h2>6. Your rights</h2>
-  <p>You can edit, pause or delete your ads at any time from "My Ads", and remove favorites at any time. To request deletion of data linked to your account, email us at <a href="mailto:omran_adam@yahoo.com">omran_adam@yahoo.com</a>.</p>
-</section>
-
-<section>
-  <h2>7. Children</h2>
-  <p>The app is not directed to children under 13 and we do not knowingly collect their data.</p>
-</section>
-
-<section>
-  <h2>8. Content responsibility</h2>
-  <p>Ads are created by advertisers. Okazyon is not a party to any transaction, payment or delivery and is not responsible for the accuracy of ads or the quality of goods and services.</p>
-</section>
-
-<section>
-  <h2>9. Changes and contact</h2>
-  <p>We may update this policy; the date above shows the latest revision. Contact: <a href="mailto:omran_adam@yahoo.com">omran_adam@yahoo.com</a> · Phone / WhatsApp: <a href="tel:+201004279150">+20 100 427 9150</a></p>
-</section>
-</div>
-
-<footer>© 2026 Okazyon</footer>
-</div>
+<script>
+(function(){
+  var body=document.body, html=document.documentElement;
+  var btnEn=document.getElementById('btn-en'), btnAr=document.getElementById('btn-ar');
+  function setLang(l){
+    body.setAttribute('data-lang',l);
+    html.lang=l; html.dir=(l==='ar'?'rtl':'ltr');
+    btnEn.classList.toggle('active',l==='en');
+    btnAr.classList.toggle('active',l==='ar');
+    try{localStorage.setItem('okazion-lang',l)}catch(e){}
+  }
+  var saved=null; try{saved=localStorage.getItem('okazion-lang')}catch(e){}
+  var q=new URLSearchParams(location.search).get('lang');
+  var start=q||saved||((navigator.language||'').toLowerCase().indexOf('ar')===0?'ar':'en');
+  setLang(start==='ar'?'ar':'en');
+  btnEn.onclick=function(){setLang('en')};
+  btnAr.onclick=function(){setLang('ar')};
+  document.getElementById('theme').onclick=function(){
+    var cur=html.getAttribute('data-theme');
+    var dark=cur?cur==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;
+    html.setAttribute('data-theme',dark?'light':'dark');
+  };
+})();
+</script>
 </body>
 </html>
